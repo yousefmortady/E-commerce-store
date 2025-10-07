@@ -4,44 +4,44 @@ import mongoose from "mongoose"; // import mongoose to create the schema and mod
 const usermodel = new mongoose.Schema({
 
     firstname : {
-        type : String,
-        trim : true,
+        type : "string",
+        trim : "true"
     },
 
     lastname : {
-        type : String,
-        trim : true,
+        type : "string",
+        trim : "true"
     },
 
     username : {
-        type : String,
-        trim : true,
+        type : "string",
+        trim : "true"
     },
 
     email : {
-        type : String,
-        trim : true,
-        unique : true,
+         type : "string",
+        trim : "true",
+        unique : "true"
     },
 
     password : {
-        type : String,
-        trim : true,
+         type : "string",
+        trim : "true"
     },
 
     profileimage : {
-        type : String,
+        type : "string",
     },
 
     role : {
-        type : String,
+        type : "string",
         enum : ["user" , "admin"],
         default : "user"
     }
 
 },{
     timestamps : true, // to know when the user is created or updated
-    collection : "user" // name of the collection in the database
+    collection : "User" // name of the collection in the database
 }
 )
 

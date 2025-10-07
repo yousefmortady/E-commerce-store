@@ -1,11 +1,12 @@
 // importations 
 
 import express from 'express';
-import dotenv from 'dotenv';
+import dotenv from "dotenv";
 import {connectDB} from './DB/mongoose.js';  // import the function that connect to DB
 import morgan from 'morgan';
 import cookieParser from 'cookie-parser';
 import authrouter from './routes/Auth-Routes.js';
+
 
 
 
@@ -21,7 +22,7 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3000;  // take the port from env file or 3000 if not specified
 
-connectDB(); // call the function to connect to DB
+
 
 //////////////////////////////////////////////////////////////////
 
@@ -36,6 +37,8 @@ app.get("/test" , (req,res) => {
 }
 )
 
+
+connectDB(); // call the function to connect to DB
 
 
 app.listen(PORT, () => {

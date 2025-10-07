@@ -6,6 +6,6 @@ import { registerValidation } from '../services/Auth-Validation.js'; // import t
 
 const authrouter = express.Router(); // create a router object
 
-authrouter.route('/register').post(validate(registerValidation), register); // route for user registration with validation middleware
+authrouter.route("/register").post(validate(registerValidation), register); // route for user registration with validation middleware
 
 export default authrouter; // export the router to use it in other files

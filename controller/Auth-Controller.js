@@ -5,10 +5,10 @@ import asyncHandler from "express-async-handler"; // to handle async errors in e
 
 
 
-export const register = asyncHandler(async (req, res) => {
+export const register = asyncHandler(async (req, res) => {  
 
     const data = req.body; // get the data from the request body
 
-    res.status(200).json({message: "User registered successfully", data});
+    res.status(200).json(data);
 
 }); // register function to handle the registration logic
